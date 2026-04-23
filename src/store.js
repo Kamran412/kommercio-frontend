@@ -3,7 +3,9 @@ import { persist } from 'zustand/middleware';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-const API = axios.create({ baseURL: '/api' });
+const API = axios.create({ 
+  baseURL: 'https://kommercio-backend.onrender.com/api' 
+});
 
 // Attach token automatically
 API.interceptors.request.use(cfg => {
